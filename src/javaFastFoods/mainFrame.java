@@ -67,13 +67,13 @@ public class mainFrame extends javax.swing.JFrame {
         total_label = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        tax_label = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        discount_btn = new javax.swing.JTextField();
+        pay_btn = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        printReciept_btn = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -478,17 +478,17 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
         jLabel13.setText("Tax $:");
 
-        jTextField1.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
-        jTextField1.setText("0");
+        tax_label.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
+        tax_label.setText("0");
 
         jLabel14.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
         jLabel14.setText("Dis $:");
 
-        jTextField2.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
-        jTextField2.setText("0");
+        discount_btn.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
+        discount_btn.setText("0");
 
-        jButton1.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 24)); // NOI18N
-        jButton1.setText("Pay");
+        pay_btn.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 24)); // NOI18N
+        pay_btn.setText("Pay");
 
         jLabel15.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
         jLabel15.setText("Balance:");
@@ -496,8 +496,8 @@ public class mainFrame extends javax.swing.JFrame {
         jTextField3.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
         jTextField3.setText("0");
 
-        jButton2.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 24)); // NOI18N
-        jButton2.setText("Print");
+        printReciept_btn.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 24)); // NOI18N
+        printReciept_btn.setText("Print");
 
         jTextField4.setFont(new java.awt.Font("Ubuntu Sans Mono", 1, 20)); // NOI18N
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -528,17 +528,17 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pay_btn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tax_label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel14)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(discount_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -548,7 +548,7 @@ public class mainFrame extends javax.swing.JFrame {
                                 .addGap(84, 84, 84))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(printReciept_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42))))
         );
         jPanel9Layout.setVerticalGroup(
@@ -559,9 +559,9 @@ public class mainFrame extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(subtotal_labrl)
                     .addComponent(jLabel13)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tax_label, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(discount_btn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
@@ -575,13 +575,13 @@ public class mainFrame extends javax.swing.JFrame {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pay_btn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel15)
                                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(printReciept_btn, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
@@ -663,8 +663,7 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField discount_btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -702,13 +701,14 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JButton pay_btn;
+    private javax.swing.JButton printReciept_btn;
     private javax.swing.JPanel recieptView_panel;
     private javax.swing.JTable selectedItems_table;
     private javax.swing.JLabel subtotal_labrl;
+    private javax.swing.JTextField tax_label;
     private javax.swing.JLabel total_label;
     // End of variables declaration//GEN-END:variables
 }
