@@ -46,7 +46,7 @@ public class mainFrame extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        ad_bannner_label = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         selectedItems_table = new javax.swing.JTable();
         recieptView_panel = new javax.swing.JPanel();
@@ -389,23 +389,23 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        jLabel6.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
-        jLabel6.setText("Banner");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ad_bannner_label.setFont(new java.awt.Font("Liberation Sans", 0, 24)); // NOI18N
+        ad_bannner_label.setText("Banner");
+        ad_bannner_label.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+                .addComponent(ad_bannner_label, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                .addComponent(ad_bannner_label, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -651,6 +651,7 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ad_bannner_label;
     private javax.swing.JTextField discount_btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -669,7 +670,6 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
