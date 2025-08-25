@@ -1,5 +1,9 @@
 package javaFastFoods;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author elisha
@@ -12,6 +16,22 @@ public class mainFrame extends javax.swing.JFrame {
     public mainFrame() {
         initComponents();
     }
+    
+//    Function to round off double value to two decimal places
+    public Double RoundedValue(Double value){
+        DecimalFormat df = new DecimalFormat("#.##"); // Define pattern for two decimal places
+        String formattedValue = df.format(value);
+        
+        value = Double.valueOf(formattedValue);
+        
+        return value;
+    }
+    
+    public void AddToCart(String Name, Double Price){
+        String quantity = JOptionPane.showInputDialog(null, "Please Enter Your Quantity", "1");
+        
+
+    }
 
 
     @SuppressWarnings("unchecked")
@@ -20,7 +40,7 @@ public class mainFrame extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        Cheeseburger = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -48,7 +68,7 @@ public class mainFrame extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         ad_bannner_label = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        selectedItems_table = new javax.swing.JTable();
+        cart_table = new javax.swing.JTable();
         recieptView_panel = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -73,22 +93,27 @@ public class mainFrame extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Menu", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Ubuntu Sans", 1, 24))); // NOI18N
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Cheeseburger.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Cheeseburger.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CheeseburgerMouseClicked(evt);
+            }
+        });
 
         jLabel2.setText("jLabel2");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout CheeseburgerLayout = new javax.swing.GroupLayout(Cheeseburger);
+        Cheeseburger.setLayout(CheeseburgerLayout);
+        CheeseburgerLayout.setHorizontalGroup(
+            CheeseburgerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CheeseburgerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        CheeseburgerLayout.setVerticalGroup(
+            CheeseburgerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CheeseburgerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
                 .addContainerGap())
@@ -335,7 +360,7 @@ public class mainFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Cheeseburger, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -365,7 +390,7 @@ public class mainFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Cheeseburger, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
@@ -422,7 +447,7 @@ public class mainFrame extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        selectedItems_table.setModel(new javax.swing.table.DefaultTableModel(
+        cart_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -430,7 +455,7 @@ public class mainFrame extends javax.swing.JFrame {
                 "Name", "Qty", "Price"
             }
         ));
-        jScrollPane1.setViewportView(selectedItems_table);
+        jScrollPane1.setViewportView(cart_table);
 
         recieptView_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -627,6 +652,14 @@ public class mainFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void CheeseburgerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CheeseburgerMouseClicked
+        String name = "Cheeseburger";
+        Double price = 3.99;
+        
+        AddToCart(name, price);       
+       
+    }//GEN-LAST:event_CheeseburgerMouseClicked
+
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -651,7 +684,9 @@ public class mainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Cheeseburger;
     private javax.swing.JLabel ad_bannner_label;
+    private javax.swing.JTable cart_table;
     private javax.swing.JTextField discount_btn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -682,7 +717,6 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -694,7 +728,6 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton pay_btn;
     private javax.swing.JButton printReciept_btn;
     private javax.swing.JPanel recieptView_panel;
-    private javax.swing.JTable selectedItems_table;
     private javax.swing.JLabel subtotal_labrl;
     private javax.swing.JTextField tax_label;
     private javax.swing.JLabel total_label;
