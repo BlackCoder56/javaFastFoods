@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import SoundPackage.NotificationSounds;
 
 /**
  *
@@ -29,21 +30,31 @@ public class mainFrame extends javax.swing.JFrame {
     }
     
     public void AddToCart(String Name, Double Price){
+//        Notification Sound
+        NotificationSounds.playComplete();
         String prompt = "Please Enter the "+ Name + " Quantity";
-        String quantity = JOptionPane.showInputDialog(null, prompt, "1");
-
-        int tQuantity = Integer.parseInt(quantity);
-        Double totalAmount = Price * tQuantity;
-        Double RoundedTotalAmount = RoundedValue(totalAmount);
         
-        // add product to cart
-        DefaultTableModel dt  = (DefaultTableModel) cart_table.getModel();
-            Vector v = new Vector();
+        try {
+            String quantity = JOptionPane.showInputDialog(null, prompt, "1");
             
-            v.add(Name);
-            v.add(tQuantity);
-            v.add(RoundedTotalAmount);
-            dt.addRow(v);          
+            int tQuantity = Integer.parseInt(quantity);
+            Double totalAmount = Price * tQuantity;
+            Double RoundedTotalAmount = RoundedValue(totalAmount);
+
+            // add product to cart
+            DefaultTableModel dt  = (DefaultTableModel) cart_table.getModel();
+                Vector v = new Vector();
+
+                v.add(Name);
+                v.add(tQuantity);
+                v.add(RoundedTotalAmount);
+                dt.addRow(v);          
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
+        
+       
         
     }
 
