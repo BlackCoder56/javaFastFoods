@@ -167,7 +167,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         doubleBeefBurger_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/doubleCheeseBurger.jpg"))); // NOI18N
 
-        doubleCheeseburger_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        doubleCheeseburger_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        doubleCheeseburger_label.setForeground(new java.awt.Color(255, 102, 0));
         doubleCheeseburger_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         doubleCheeseburger_label.setText("Double Cheeseburger");
         doubleCheeseburger_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -202,7 +203,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         friedChicken_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/friedchicken.jpg"))); // NOI18N
 
-        friedchicken_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        friedchicken_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        friedchicken_label.setForeground(new java.awt.Color(255, 102, 0));
         friedchicken_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         friedchicken_label.setText("Fried Chicken (2pcs)");
         friedchicken_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -241,7 +243,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         chickenBurrito_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/chickenBurrito.jpeg"))); // NOI18N
 
-        chickenburrito_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        chickenburrito_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        chickenburrito_label.setForeground(new java.awt.Color(255, 102, 0));
         chickenburrito_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         chickenburrito_label.setText("Chicken Burrito");
         chickenburrito_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -273,10 +276,16 @@ public class mainFrame extends javax.swing.JFrame {
 
         shawarma.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         shawarma.setPreferredSize(new java.awt.Dimension(263, 237));
+        shawarma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                shawarmaMouseClicked(evt);
+            }
+        });
 
         shawarma_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/shawarma.jpeg"))); // NOI18N
 
-        shawarma_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        shawarma_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        shawarma_label.setForeground(new java.awt.Color(255, 102, 0));
         shawarma_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shawarma_label.setText("Shawarma");
         shawarma_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -303,10 +312,16 @@ public class mainFrame extends javax.swing.JFrame {
         );
 
         rolex.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        rolex.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rolexMouseClicked(evt);
+            }
+        });
 
         rolex_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rolex.jpg"))); // NOI18N
 
-        shawarma_label1.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        shawarma_label1.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        shawarma_label1.setForeground(new java.awt.Color(255, 102, 0));
         shawarma_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shawarma_label1.setText("Rolex");
         shawarma_label1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -348,7 +363,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         frenchFries_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/fries.jpg"))); // NOI18N
 
-        frenchFries_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        frenchFries_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        frenchFries_label.setForeground(new java.awt.Color(255, 102, 0));
         frenchFries_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         frenchFries_label.setText("Fries (chips)");
         frenchFries_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -392,7 +408,8 @@ public class mainFrame extends javax.swing.JFrame {
 
         coke_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/coke.jpeg"))); // NOI18N
 
-        coke_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        coke_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        coke_label.setForeground(new java.awt.Color(255, 102, 0));
         coke_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         coke_label.setText("CocaCola");
         coke_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
@@ -435,9 +452,10 @@ public class mainFrame extends javax.swing.JFrame {
 
         pepsi_image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pepsi.jpg"))); // NOI18N
 
-        pepsi_label.setFont(new java.awt.Font("URW Bookman", 0, 20)); // NOI18N
+        pepsi_label.setFont(new java.awt.Font("URW Bookman", 1, 20)); // NOI18N
+        pepsi_label.setForeground(new java.awt.Color(255, 102, 0));
         pepsi_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pepsi_label.setText("CocaCola");
+        pepsi_label.setText("Pepsi");
         pepsi_label.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         pepsi_label.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
@@ -756,7 +774,10 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_chickenBurritoMouseClicked
 
     private void frenchFriesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_frenchFriesMouseClicked
-        // TODO add your handling code here:
+        String name = "French Fries";
+        Double price = 2.29;
+        
+        AddToCart(name, price); 
     }//GEN-LAST:event_frenchFriesMouseClicked
 
     private void frenchFriesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_frenchFriesKeyPressed
@@ -764,7 +785,10 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_frenchFriesKeyPressed
 
     private void cokeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cokeMouseClicked
-        // TODO add your handling code here:
+        String name = "Cocacola";
+        Double price = 1.99;
+        
+        AddToCart(name, price); 
     }//GEN-LAST:event_cokeMouseClicked
 
     private void cokeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cokeKeyPressed
@@ -772,12 +796,29 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cokeKeyPressed
 
     private void pepsiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pepsiMouseClicked
-        // TODO add your handling code here:
+        String name = "Pepsi";
+        Double price = 1.99;
+        
+        AddToCart(name, price); 
     }//GEN-LAST:event_pepsiMouseClicked
 
     private void pepsiKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pepsiKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_pepsiKeyPressed
+
+    private void shawarmaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_shawarmaMouseClicked
+        String name = "Shawarma";
+        Double price = 3.45;
+        
+        AddToCart(name, price); 
+    }//GEN-LAST:event_shawarmaMouseClicked
+
+    private void rolexMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rolexMouseClicked
+        String name = "Rolex";
+        Double price = 1.15;
+        
+        AddToCart(name, price); 
+    }//GEN-LAST:event_rolexMouseClicked
 
 
     public static void main(String args[]) {
