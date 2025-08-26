@@ -534,6 +534,7 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        cart_table.setFont(new java.awt.Font("Liberation Sans", 0, 20)); // NOI18N
         cart_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -542,9 +543,10 @@ public class mainFrame extends javax.swing.JFrame {
                 "Name", "Quantity", "Price"
             }
         ));
+        cart_table.setRowHeight(30);
         jScrollPane1.setViewportView(cart_table);
         if (cart_table.getColumnModel().getColumnCount() > 0) {
-            cart_table.getColumnModel().getColumn(0).setPreferredWidth(140);
+            cart_table.getColumnModel().getColumn(0).setPreferredWidth(180);
         }
 
         recieptView_panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -553,7 +555,7 @@ public class mainFrame extends javax.swing.JFrame {
         recieptView_panel.setLayout(recieptView_panelLayout);
         recieptView_panelLayout.setHorizontalGroup(
             recieptView_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 289, Short.MAX_VALUE)
+            .addGap(0, 254, Short.MAX_VALUE)
         );
         recieptView_panelLayout.setVerticalGroup(
             recieptView_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -708,8 +710,8 @@ public class mainFrame extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(recieptView_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
