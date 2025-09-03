@@ -46,6 +46,7 @@ public class mainFrame extends javax.swing.JFrame {
                 "$"+String.valueOf(subtotal)
         );
         
+//        Changing subtotal label color to red if its value is more than(>) zero (0).
         if(subtotal > 0){
             subtotal_label.setForeground(new Color(255, 0, 0));
         }
