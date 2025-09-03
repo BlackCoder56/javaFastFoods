@@ -5,6 +5,7 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import SoundPackage.NotificationSounds;
+import java.awt.Color;
 
 /**
  *
@@ -44,6 +45,11 @@ public class mainFrame extends javax.swing.JFrame {
         subtotal_label.setText(
                 "$"+String.valueOf(subtotal)
         );
+        
+        if(subtotal > 0){
+            subtotal_label.setForeground(new Color(255, 0, 0));
+        }
+        
     }
     
     public void AddToCart(String Name, Double Price){
